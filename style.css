@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: cover;
+    position: relative;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.container__conteudo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.container__imagem-robo {
+    max-width: 100%;
+    height: auto;
+}
+
+.container__informacoes {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.container__botao {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    border: none;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.container__texto {
+    margin: 16px 0;
+}
+
+.container__texto-azul {
+    color: #1875E8;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1.1;
+}
+
+h2,
+p,
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+h2 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container__conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .container__informacoes {
+        align-items: center;
+    }
+    
+    .container__imagem-robo {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+        min-height: auto;
+    }
+    
+    .container__imagem-robo {
+        max-width: 80%;
+    }
+    
+    h1 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+    
+    h2 {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+}
